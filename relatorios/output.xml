@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220927 15:28:17.948" rpa="false" schemaversion="3">
+<suite id="s1" name="Sprint3 Test" source="C:\Users\renata.carvalho\Automação de testes\Projeto_Avaliador\sprint3_test.robot">
+<test id="s1-t1" name="Tela de login" line="8">
+<kw name="Abrir navegador" library="sprint3_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220927 15:28:18.232" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220927 15:28:18.232" endtime="20220927 15:28:19.729"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220927 15:28:19.729" endtime="20220927 15:28:19.846"/>
+</kw>
+<status status="PASS" starttime="20220927 15:28:18.232" endtime="20220927 15:28:19.846"/>
+</kw>
+<kw name="Dado que o usuario admin esteja na tela de login" library="sprint3_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220927 15:28:19.847" level="INFO">Opening url 'http://matera/Avaliador/QA/login'</msg>
+<status status="PASS" starttime="20220927 15:28:19.846" endtime="20220927 15:28:20.311"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=//img[contains(@alt,'Logo')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220927 15:28:20.311" endtime="20220927 15:28:20.340"/>
+</kw>
+<status status="PASS" starttime="20220927 15:28:19.846" endtime="20220927 15:28:20.340"/>
+</kw>
+<kw name="Quando ele clicar no campo E-mail" library="sprint3_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//input[contains(@name,'email')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220927 15:28:20.340" level="INFO">Clicking element '//input[contains(@name,'email')]'.</msg>
+<status status="PASS" starttime="20220927 15:28:20.340" endtime="20220927 15:28:20.399"/>
+</kw>
+<status status="PASS" starttime="20220927 15:28:20.340" endtime="20220927 15:28:20.399"/>
+</kw>
+<kw name="E digitar um email valido" library="sprint3_resources">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=//input[contains(@name,'email')]</arg>
+<arg>text=admin.rh@valgroupco.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220927 15:28:20.402" level="INFO">Typing text 'admin.rh@valgroupco.com' into text field '//input[contains(@name,'email')]'.</msg>
+<status status="PASS" starttime="20220927 15:28:20.402" endtime="20220927 15:28:20.476"/>
+</kw>
+<status status="PASS" starttime="20220927 15:28:20.400" endtime="20220927 15:28:20.476"/>
+</kw>
+<kw name="E clicar no campo senha" library="sprint3_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//input[contains(@name,'senha')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220927 15:28:20.477" level="INFO">Clicking element '//input[contains(@name,'senha')]'.</msg>
+<status status="PASS" starttime="20220927 15:28:20.477" endtime="20220927 15:28:20.522"/>
+</kw>
+<status status="PASS" starttime="20220927 15:28:20.477" endtime="20220927 15:28:20.522"/>
+</kw>
+<kw name="E digitar senha correta" library="sprint3_resources">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=//input[contains(@name,'senha')]</arg>
+<arg>text=valgroup2022</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220927 15:28:20.524" level="INFO">Typing text 'valgroup2022' into text field '//input[contains(@name,'senha')]'.</msg>
+<status status="PASS" starttime="20220927 15:28:20.523" endtime="20220927 15:28:20.580"/>
+</kw>
+<status status="PASS" starttime="20220927 15:28:20.523" endtime="20220927 15:28:20.580"/>
+</kw>
+<kw name="E clicar no botão Acessar" library="sprint3_resources">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>locator=//button[@class='px-10 py-2 text-white bg-[#1D284A] rounded-[4px] hover:bg-[#222d50] text-[12px] font-light'][contains(.,'Acessar')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220927 15:28:20.580" level="INFO">Clicking button '//button[@class='px-10 py-2 text-white bg-[#1D284A] rounded-[4px] hover:bg-[#222d50] text-[12px] font-light'][contains(.,'Acessar')]'.</msg>
+<status status="PASS" starttime="20220927 15:28:20.580" endtime="20220927 15:28:20.648"/>
+</kw>
+<status status="PASS" starttime="20220927 15:28:20.580" endtime="20220927 15:28:20.648"/>
+</kw>
+<kw name="Então ele deve ser direcionado para a tela Home" library="sprint3_resources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=//span[@class='text-xs whitespace-nowrap max-w-[200px] overflow-hidden text-ellipsis'][contains(.,'Administrador')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220927 15:28:20.649" endtime="20220927 15:28:20.907"/>
+</kw>
+<status status="PASS" starttime="20220927 15:28:20.648" endtime="20220927 15:28:20.907"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220927 15:28:20.908" endtime="20220927 15:28:23.327"/>
+</kw>
+<status status="PASS" starttime="20220927 15:28:18.231" endtime="20220927 15:28:23.329"/>
+</test>
+<status status="PASS" starttime="20220927 15:28:17.951" endtime="20220927 15:28:23.332"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Sprint3 Test">Sprint3 Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
